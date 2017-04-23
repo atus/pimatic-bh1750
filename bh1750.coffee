@@ -43,7 +43,7 @@ module.exports = (env) ->
       @sensor = new BH1750({
         address: parseInt @config.address,
         device: @config.device,
-        command: 0x10,
+        command: parseInt @config.command,
         length: 2
       });
       Promise.promisifyAll(@sensor)
